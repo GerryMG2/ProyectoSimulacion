@@ -19,12 +19,16 @@ Fz <- 0
 
 TotalCoordinates <- 0
 TotalElements <- 0
-TotalDirichletCond <- 0
+TotalDirichletCondx <- 0
+TotalDirichletCondy <- 0
+TotalDirichletCondz <- 0
 TotalNeumannCond <- 0
 
 coordinatesM <- NULL
 elementsM <- NULL
-dirichletM <- NULL
+dirichletxM <- NULL
+dirichletyM <- NULL
+dirichletzM <- NULL
 neumannM <- NULL
 
 for (i in 1:length(linn)){
@@ -46,12 +50,16 @@ for (i in 1:length(linn)){
        
        TotalCoordinates <- as.numeric(auxlin[1])
        TotalElements <- as.numeric(auxlin[2])
-       TotalDirichletCond <- as.numeric(auxlin[3])
-       TotalNeumannCond <- as.numeric(auxlin[4])
+       TotalDirichletCondx <- as.numeric(auxlin[3])
+       TotalDirichletCondy <- as.numeric(auxlin[4])
+       TotalDirichletCondz <- as.numeric(auxlin[5])
+       TotalNeumannCond <- as.numeric(auxlin[6])
 
        coordinatesM <- matrix(data = 0, nrow = TotalCoordinates, ncol = 4)
        elementsM <- matrix(data = 0, nrow = TotalElements, ncol = 5)
-       dirichletM <- matrix(data = 0, nrow = TotalDirichletCond, ncol = 2)
+       dirichletxM <- matrix(data = 0, nrow = TotalDirichletCondx, ncol = 2)
+       dirichletyM <- matrix(data = 0, nrow = TotalDirichletCondy, ncol = 2)
+       dirichletzM <- matrix(data = 0, nrow = TotalDirichletCondz, ncol = 2)
        neumannM <- matrix(data = 0, nrow = TotalNeumannCond, ncol = 2)
    }
 
@@ -63,11 +71,19 @@ for (i in 1:length(linn)){
        estado <- 0
        contador <- 0
    }
-   if(linn[i] == "EndDirichlet"){
+   if(linn[i] == "EndDirichlet_x"){
        estado <- 0
        contador <- 0
-
    }
+    if(linn[i] == "EndDirichlet_y"){
+       estado <- 0
+       contador <- 0
+   }
+    if(linn[i] == "EndDirichlet_z"){
+       estado <- 0
+       contador <- 0
+   }
+
    if(linn[i] == "EndNeumann"){
        estado <- 0
        contador <- 0
@@ -96,13 +112,30 @@ for (i in 1:length(linn)){
 
    if(estado == 3){
        auxlin <- strsplit(linn[i]," +")[[1]]
-       dirichletM[contador,1] = as.numeric(auxlin[1])
-       dirichletM[contador,2] = as.numeric(auxlin[2])
+       dirichletxM[contador,1] = as.numeric(auxlin[1])
+       dirichletxM[contador,2] = as.numeric(auxlin[2])
        
        contador <- contador + 1
    }
 
    if(estado == 4){
+       auxlin <- strsplit(linn[i]," +")[[1]]
+       dirichletyM[contador,1] = as.numeric(auxlin[1])
+       dirichletyM[contador,2] = as.numeric(auxlin[2])
+       
+       contador <- contador + 1
+   }
+   
+   if(estado == 5){
+       auxlin <- strsplit(linn[i]," +")[[1]]
+       dirichletzM[contador,1] = as.numeric(auxlin[1])
+       dirichletzM[contador,2] = as.numeric(auxlin[2])
+       
+       contador <- contador + 1
+   }
+
+
+   if(estado == 6){
        auxlin <- strsplit(linn[i]," +")[[1]]
        neumannM[contador,1] = as.numeric(auxlin[1])
        neumannM[contador,2] = as.numeric(auxlin[2])
@@ -120,12 +153,20 @@ for (i in 1:length(linn)){
        estado <- 2
    }
 
-   if(linn[i] == "Dirichlet"){
+   if(linn[i] == "Dirichlet_x"){
        estado <- 3
    }
 
-   if(linn[i] == "Neumann"){
+   if(linn[i] == "Dirichlet_y"){
        estado <- 4
+   }
+
+   if(linn[i] == "Dirichlet_z"){
+       estado <- 5
+   }
+
+   if(linn[i] == "Neumann"){
+       estado <- 6
 
    }
    
@@ -136,5 +177,7 @@ close(con)
 
 print(coordinatesM) 
 print(elementsM)
-print(dirichletM) 
+print(dirichletxM)
+print(dirichletyM) 
+print(dirichletzM) 
 print(neumannM) 
