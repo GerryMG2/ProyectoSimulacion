@@ -208,7 +208,7 @@ for (i in 1:TotalElements) {
 
 
 kfinal <- matrix(data = 0, nrow = TotalCoordinates * 3, ncol = TotalCoordinates * 3)
-bfinal <- matrix(data=0, nrow= TotalCoordinates, ncol=1)
+bfinal <- matrix(data=0, nrow= TotalCoordinates * 3, ncol=1)
 
 for (i in 1:TotalElements) {
     jm <- matrix(data = 0, nrow = 3, ncol = 3)
@@ -225,37 +225,243 @@ for (i in 1:TotalElements) {
     jm[3,2] = listaElements[[i]][4][[1]][[2]][3] - listaElements[[i]][2][[1]][[2]][3]
     jm[3,3] = listaElements[[i]][5][[1]][[2]][3] - listaElements[[i]][2][[1]][[2]][3]
     
+
     ja <- det(jm)
     
     c1 <- 1/((listaElements[[i]][3][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1])^2)
     c2 <- ((4 * listaElements[[i]][2][[1]][[2]][1]) + (4*listaElements[[i]][3][[1]][[2]][1]) - (8*listaElements[[i]][9][[1]][[2]][1]))/(listaElements[[i]][3][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1])
     
-    if(c1 == Inf){
-        print("hay error cosita!")
-        print(i)
+    if(c2 == Inf){
+        print("Hay Error cosita")
     }
     
 
-    # k <- (-4 * (c1 * c2))/3
-    # j <- (2*(c2^2))/15
-    # ii <-  -((16 * (c1^2))/3) - ((2 * (c2^2))/3)
-    # h <- ((2/3)*(c1 * c2)) + ((1/30) * (c2^2))
-    # g <- -((16 * (c1^2))/3) - ((4/3) * (c1 * c2)) - ((2/15) * (c2^2))
-    # f <- ((2/3) * (c1 * c2)) - ((1/30) * (c2^2))
-    # e <- ((8/3) * (c1^2)) + ((1/30) * (c2^2))
-    # d <- ((1/(192 * (c2^2))) * (((4 * c2) - (c1))^4) ) - ((1/(3840 * (c2^3))) * (((4 * c2) - (c1))^5) ) + ((1/(7680 * (c2^3))) * (((4 * c2) + (8*c1))^5) ) - ((7/(7680 * (c2^3))) * (((4 * c2) - (8*c1))^5) ) + ((1/(768 * (c2^3))) * ((-8 * c1)^5) ) - ((c1/(96 * (c2^3))) * (((4 * c2) - (-8*c1))^4) ) + ((((2*c1) - 1)/(192 * (c2^3))) * (((-8*c1))^4)) 
-    # c <- (4/15) * (c2^2)
-    # b <- -((1/(192 * (c2^2))) * (((4 * c1) + (c2))^4) ) + ((1/(24 * (c2))) * (((4 * c1) + (c2))^3) ) + ((1/(3840 * (c2^3))) * (((4 * c1) + (c2))^5) ) - ((1/(3840 * (c2^3))) * (((4 * c1) - (3* c2))^5) )
-    # a <- -((1/(192 * (c2^2))) * (((4 * c1) - (c2))^4) ) - ((1/(24 * (c2))) * (((4 * c1) - (c2))^3) ) - ((1/(3840 * (c2^3))) * (((4 * c1) - (c2))^5) ) + ((1/(3840 * (c2^3))) * (((4 * c1) + (3* c2))^5) )
+    k <- (-4 * (c1 * c2))/3
+    j <- (2*(c2^2))/15
+    ii <-  -((16 * (c1^2))/3) - ((2 * (c2^2))/3)
+    h <- ((2/3)*(c1 * c2)) + ((1/30) * (c2^2))
+    g <- -((16 * (c1^2))/3) - ((4/3) * (c1 * c2)) - ((2/15) * (c2^2))
+    f <- ((2/3) * (c1 * c2)) - ((1/30) * (c2^2))
+    e <- ((8/3) * (c1^2)) + ((1/30) * (c2^2))
+    d <- ((1/(192 * (c2^2))) * (((4 * c2) - (c1))^4) ) - ((1/(3840 * (c2^3))) * (((4 * c2) - (c1))^5) ) + ((1/(7680 * (c2^3))) * (((4 * c2) + (8*c1))^5) ) - ((7/(7680 * (c2^3))) * (((4 * c2) - (8*c1))^5) ) + ((1/(768 * (c2^3))) * ((-8 * c1)^5) ) - ((c1/(96 * (c2^3))) * (((4 * c2) - (-8*c1))^4) ) + ((((2*c1) - 1)/(192 * (c2^3))) * (((-8*c1))^4)) 
+    c <- (4/15) * (c2^2)
+    b <- -((1/(192 * (c2^2))) * (((4 * c1) + (c2))^4) ) + ((1/(24 * (c2))) * (((4 * c1) + (c2))^3) ) + ((1/(3840 * (c2^3))) * (((4 * c1) + (c2))^5) ) - ((1/(3840 * (c2^3))) * (((4 * c1) - (3* c2))^5) )
+    a <- -((1/(192 * (c2^2))) * (((4 * c1) - (c2))^4) ) - ((1/(24 * (c2))) * (((4 * c1) - (c2))^3) ) - ((1/(3840 * (c2^3))) * (((4 * c1) - (c2))^5) ) + ((1/(3840 * (c2^3))) * (((4 * c1) + (3* c2))^5) )
 
-    # kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * a
-    # kfinal[listaElements[[i]][2][[1]][[1]]+10,listaElements[[i]][2][[1]][[1]]+10] = EI * ja * a
-    # kfinal[listaElements[[i]][2][[1]][[1]]+20,listaElements[[i]][2][[1]][[1]]+20] = EI * ja * a
+    # fila 
 
-    # kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * a
-    # kfinal[listaElements[[i]][2][[1]][[1]]+10,listaElements[[i]][3][[1]][[1]]+10] = EI * ja * a
-    # kfinal[listaElements[[i]][2][[1]][[1]]+20,listaElements[[i]][3][[1]][[1]]+20] = EI * ja * a
+    kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * a
+    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] = EI * ja * a
+    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] = EI * ja * a
 
+    kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * e
+    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] = EI * ja * e
+    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] = EI * ja * e
 
+    kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][6][[1]][[1]]] = EI * ja * -f
+    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] = EI * ja * -f
+    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] = EI * ja * -f
+
+    kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][8][[1]][[1]]] = EI * ja * -f
+    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] = EI * ja * -f
+    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] = EI * ja * -f
+
+    kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][9][[1]][[1]]] = EI * ja * g
+    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] = EI * ja * g
+    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] = EI * ja * g
+
+    kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][10][[1]][[1]]] = EI * ja * f
+    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] = EI * ja * f
+    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] = EI * ja * f
+
+    kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][11][[1]][[1]]] = EI * ja * f
+    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] = EI * ja * f
+    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] = EI * ja * f
+
+    # fila 
+
+    kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * e
+    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] = EI * ja * e
+    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] = EI * ja * e
+
+    kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * b
+    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] = EI * ja * b
+    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] = EI * ja * b
+
+    kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][6][[1]][[1]]] = EI * ja * -h
+    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] = EI * ja * -h
+    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] = EI * ja * -h
+
+    kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][8][[1]][[1]]] = EI * ja * -h
+    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] = EI * ja * -h
+    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] = EI * ja * -h
+
+    kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][9][[1]][[1]]] = EI * ja * ii
+    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] = EI * ja * ii
+    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] = EI * ja * ii
+
+    kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][10][[1]][[1]]] = EI * ja * h
+    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] = EI * ja * h
+    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] = EI * ja * h
+
+    kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][11][[1]][[1]]] = EI * ja * h
+    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] = EI * ja * h
+    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] = EI * ja * h
+
+    # fila x
+
+    kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * -f
+    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] = EI * ja * -f
+    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] = EI * ja * -f
+
+    kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * -h
+    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] = EI * ja * -h
+    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] = EI * ja * -h
+
+    kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][6][[1]][[1]]] = EI * ja * c
+    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] = EI * ja * c
+    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] = EI * ja * c
+
+    kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][8][[1]][[1]]] = EI * ja * j
+    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] = EI * ja * j
+    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] = EI * ja * j
+
+    kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][9][[1]][[1]]] = EI * ja * -k
+    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] = EI * ja * -k
+    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] = EI * ja * -k
+
+    kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][10][[1]][[1]]] = EI * ja * -c
+    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] = EI * ja * -c
+    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] = EI * ja * -c
+
+    kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][11][[1]][[1]]] = EI * ja * -j
+    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] = EI * ja * -j
+    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] = EI * ja * -j
+
+    # fila 
+
+    kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * -f
+    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] = EI * ja * -f
+    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] = EI * ja * -f
+
+    kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * -h
+    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] = EI * ja * -h
+    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] = EI * ja * -h
+
+    kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][6][[1]][[1]]] = EI * ja * j
+    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] = EI * ja * j
+    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] = EI * ja * j
+
+    kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][8][[1]][[1]]] = EI * ja * c
+    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] = EI * ja * c
+    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] = EI * ja * c
+
+    kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][9][[1]][[1]]] = EI * ja * -k
+    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] = EI * ja * -k
+    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] = EI * ja * -k
+
+    kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][10][[1]][[1]]] = EI * ja * -j
+    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] = EI * ja * -j
+    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] = EI * ja * -j
+
+    kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][11][[1]][[1]]] = EI * ja * -c
+    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] = EI * ja * -c
+    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] = EI * ja * -c
+
+# 3
+
+    # fila 
+
+    kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * g
+    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] = EI * ja * g
+    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] = EI * ja * g
+
+    kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * ii
+    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] = EI * ja * ii
+    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] = EI * ja * ii
+
+    kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][6][[1]][[1]]] = EI * ja * -k
+    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] = EI * ja * -k
+    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] = EI * ja * -k
+
+    kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][8][[1]][[1]]] = EI * ja * -k
+    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] = EI * ja * -k
+    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] = EI * ja * -k
+
+    kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][9][[1]][[1]]] = EI * ja * d
+    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] = EI * ja * d
+    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] = EI * ja * d
+
+    kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][10][[1]][[1]]] = EI * ja * k
+    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] = EI * ja * k
+    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] = EI * ja * k
+
+    kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][11][[1]][[1]]] = EI * ja * k
+    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] = EI * ja * k
+    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] = EI * ja * k
+
+    # fila x
+
+    kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * f
+    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] = EI * ja * f
+    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] = EI * ja * f
+
+    kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * h
+    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] = EI * ja * h
+    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] = EI * ja * h
+
+    kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][6][[1]][[1]]] = EI * ja * -c
+    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] = EI * ja * -c
+    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] = EI * ja * -c
+
+    kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][8][[1]][[1]]] = EI * ja * -j
+    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] = EI * ja * -j
+    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] = EI * ja * -j
+
+    kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][9][[1]][[1]]] = EI * ja * k
+    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] = EI * ja * k
+    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] = EI * ja * k
+
+    kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][10][[1]][[1]]] = EI * ja * c
+    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] = EI * ja * c
+    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] = EI * ja * c
+
+    kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][11][[1]][[1]]] = EI * ja * j
+    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] = EI * ja * j
+    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] = EI * ja * j
+
+    # fila 
+
+    kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * f
+    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] = EI * ja * f
+    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] = EI * ja * f
+
+    kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * h
+    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] = EI * ja * h
+    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] = EI * ja * h
+
+    kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][6][[1]][[1]]] = EI * ja * -j
+    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] = EI * ja * -j
+    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] = EI * ja * -j
+
+    kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][8][[1]][[1]]] = EI * ja * -c
+    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] = EI * ja * -c
+    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] = EI * ja * -c
+
+    kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][9][[1]][[1]]] = EI * ja * k
+    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] = EI * ja * k
+    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] = EI * ja * k
+
+    kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][10][[1]][[1]]] = EI * ja * j
+    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] = EI * ja * j
+    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] = EI * ja * j
+
+    kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][11][[1]][[1]]] = EI * ja * c
+    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]+10] = EI * ja * c
+    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] = EI * ja * c
+
+    # b final
+
+    
 
 }
