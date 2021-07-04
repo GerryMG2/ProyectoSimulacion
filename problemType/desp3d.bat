@@ -1,11 +1,12 @@
-@ECHO OFF
 
+
+
+echo %3\ > eco.txt
 del %2\%1.boh
 del %2\%1.post.res
 del %2\%1.post.dat
 del %2\%1.err
 
-rem OutputFile: %2\%1.boh
-rem ErrorFile: %2\%1.err
 
-Rscript.exe desp3d.R %2\%1
+call Rscript.exe '%3'\desp3d.R '%2\%1'
+
