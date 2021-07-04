@@ -3,7 +3,7 @@ library(inplace)
 args = commandArgs(trailingOnly=TRUE)
 
 fileInput <- paste(args[1], ".dat", sep="")
-
+fileOutput <- paste(args[1], ".post.res", sep="")
 #open .dat
 con <- file(fileInput, "r")
 linn <- readLines(con)
@@ -216,17 +216,17 @@ bfinal <- matrix(data=0, nrow= TotalCoordinates * 3, ncol=1)
 for (i in 1:TotalElements) {
     jm <- matrix(data = 0, nrow = 3, ncol = 3)
     
-    jm[1,1] = listaElements[[i]][3][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1]
-    jm[1,2] = listaElements[[i]][4][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1]
-    jm[1,3] = listaElements[[i]][5][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1]
+    jm[1,1] <- listaElements[[i]][3][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1]
+    jm[1,2] <- listaElements[[i]][4][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1]
+    jm[1,3] <- listaElements[[i]][5][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1]
 
-    jm[2,1] = listaElements[[i]][3][[1]][[2]][2] - listaElements[[i]][2][[1]][[2]][2]
-    jm[2,2] = listaElements[[i]][4][[1]][[2]][2] - listaElements[[i]][2][[1]][[2]][2]
-    jm[2,3] = listaElements[[i]][5][[1]][[2]][2] - listaElements[[i]][2][[1]][[2]][2]
+    jm[2,1] <- listaElements[[i]][3][[1]][[2]][2] - listaElements[[i]][2][[1]][[2]][2]
+    jm[2,2] <- listaElements[[i]][4][[1]][[2]][2] - listaElements[[i]][2][[1]][[2]][2]
+    jm[2,3] <- listaElements[[i]][5][[1]][[2]][2] - listaElements[[i]][2][[1]][[2]][2]
 
-    jm[3,1] = listaElements[[i]][3][[1]][[2]][3] - listaElements[[i]][2][[1]][[2]][3]
-    jm[3,2] = listaElements[[i]][4][[1]][[2]][3] - listaElements[[i]][2][[1]][[2]][3]
-    jm[3,3] = listaElements[[i]][5][[1]][[2]][3] - listaElements[[i]][2][[1]][[2]][3]
+    jm[3,1] <- listaElements[[i]][3][[1]][[2]][3] - listaElements[[i]][2][[1]][[2]][3]
+    jm[3,2] <- listaElements[[i]][4][[1]][[2]][3] - listaElements[[i]][2][[1]][[2]][3]
+    jm[3,3] <- listaElements[[i]][5][[1]][[2]][3] - listaElements[[i]][2][[1]][[2]][3]
     
 
     ja <- det(jm)
@@ -500,10 +500,10 @@ for (i in 1:TotalElements) {
 
 }
 
-resultado = matrix(data = 0, nrow = TotalCoordinates * 3, ncol = 2)
+resultado <- matrix( nrow = TotalCoordinates * 3, ncol = 2)
 
-for (i in 1:TotalCoordinates * 3) {
-   resultado[i,1] = i
+for (i in 1:(TotalCoordinates * 3)) {
+   resultado[i,1] <- i
 }
 
 for (i in 1:TotalDirichletCondx) {
@@ -522,34 +522,63 @@ for (i in 1:TotalDirichletCondz) {
 
 
 for (i in 1:TotalNeumannCond) {
-    resultado[neumannM[i,1]] <- neumannM[i,2]
-    resultado[neumannM[i,1]*2] <- neumannM[i,2]
-    resultado[neumannM[i,1]*3] <- neumannM[i,2]
+    resultado[neumannM[i,1],2] <- neumannM[i,2]
+    resultado[neumannM[i,1]*2,2] <- neumannM[i,2]
+    resultado[neumannM[i,1]*3,2] <- neumannM[i,2]
     
 }
 
 for (i in 1:(TotalCoordinates * 3)) {
    for(j in 1:TotalNeumannCond){
-       bfinal[i,1] %+<-% - (neumannM[i,2]*kfinal[neumannM[i,1]])
-       bfinal[i,1] %+<-% - (neumannM[i,2]*kfinal[neumannM[i,1] * 2])
-       bfinal[i,1] %+<-% - (neumannM[i,2]*kfinal[neumannM[i,1] * 3])
+       bfinal[i,1] %+<-% - (neumannM[j,2]*kfinal[neumannM[j,1]])
+       bfinal[i,1] %+<-% - (neumannM[j,2]*kfinal[neumannM[j,1] * 2])
+       bfinal[i,1] %+<-% - (neumannM[j,2]*kfinal[neumannM[j,1] * 3])
    }
 }
-
+rows_to_keep <- matrix(data=TRUE,nrow=1,ncol=TotalCoordinates * 3 )
+cols_to_keep <- matrix(data=TRUE,nrow=1,ncol=TotalCoordinates * 3 )
 for (i in 1:TotalNeumannCond) {
     
-
-    kfinal <-kfinal[-neumannM[i,1],]
-    bfinal <-bfinal[-neumannM[i,1],]
-    kfinal <-kfinal[-neumannM[i,1]*2,]
-    bfinal <-bfinal[-neumannM[i,1]*2,]
-    kfinal <-kfinal[-neumannM[i,1]*3,]
-    bfinal <-bfinal[-neumannM[i,1]*3,]
+    rows_to_keep[1,neumannM[i,1]] <- FALSE
+    cols_to_keep[1,neumannM[i,1]] <- FALSE
     
-    kfinal <-kfinal[,-neumannM[i,1]]
+    rows_to_keep[1,neumannM[i,1]*2] <- FALSE
+    cols_to_keep[1,neumannM[i,1]*2] <- FALSE
     
-    kfinal <-kfinal[,-neumannM[i,1]*2]
-    
-    kfinal <-kfinal[,-neumannM[i,1]*3]
-    
+    rows_to_keep[1,neumannM[i,1]*3] <- FALSE
+    cols_to_keep[1,neumannM[i,1]*3] <- FALSE
 }
+
+kfinal <- kfinal[rows_to_keep,cols_to_keep]
+bfinal <- bfinal[rows_to_keep,]
+
+mResultado <- crossprod(kfinal, bfinal)
+
+cont <- 1
+for (i in 1:(TotalCoordinates*3)) {
+  
+  if(is.na(resultado[i,2])){
+    resultado[i,2] = mResultado[cont]
+    cont <- cont + 1
+  }
+}
+file.create(fileOutput)
+conOut = file(fileOutput,"a")
+
+writeLines("GiD Post Results File 1.0", conOut)
+writeLines('Result "Desplazamiento" "Load Case 1" 1 Vector OnNodes', conOut)
+writeLines('ComponentNames "D"', conOut)
+writeLines("Values", conOut)
+
+
+for (i in 1:(TotalCoordinates)) {
+  writeLines(paste(as.character(i)," ",as.character(resultado[i,2])," ",as.character(resultado[i+TotalCoordinates,2]) ," ", as.character(resultado[i+(2*TotalCoordinates),2])), conOut)
+  
+}
+
+writeLines("End values", conOut)
+
+close(conOut)
+
+
+
