@@ -1,10 +1,18 @@
-# habilitando argumentos en R
-args = commandArgs(trailingOnly=TRUE)
+---
+title: "R Notebook"
+output: html_notebook
+---
 
-fileInput <- paste(args[1], ".dat", sep="")
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 
-#open .dat
-con <- file(fileInput, "r")
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+con <- file("prueba.dat", "r")
+
+```
+
+```{r}
 linn <- readLines(con)
 
 #variables estado
@@ -179,15 +187,9 @@ for (i in 1:length(linn)){
 }
 
 close(con)
-#matriz de coordenadas
-# print(coordinatesM) 
-#matriz elementos
-# print(elementsM)
+```
 
-# print(dirichletxM)
-# print(dirichletyM) 
-# print(dirichletzM) 
-# print(neumannM) 
+```{r}
 listaNodos <- vector("list", length = TotalCoordinates)
 listaElements <- vector("list", length = TotalElements)
 
@@ -230,32 +232,21 @@ for (i in 1:TotalElements) {
     c1 <- 1/((listaElements[[i]][3][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1])^2)
     c2 <- ((4 * listaElements[[i]][2][[1]][[2]][1]) + (4*listaElements[[i]][3][[1]][[2]][1]) - (8*listaElements[[i]][9][[1]][[2]][1]))/(listaElements[[i]][3][[1]][[2]][1] - listaElements[[i]][2][[1]][[2]][1])
     
-    if(c1 == Inf){
-        print("hay error cosita!")
-        print(i)
-    }
-    
+    k <- (-4 * (c1 * c2))/3
+    j <- (2*(c2^2))/15
+    ii <-  -((16 * (c1^2))/3) - ((2 * (c2^2))/3)
+    h <- ((2/3)*(c1 * c2)) + ((1/30) * (c2^2))
+    g <- -((16 * (c1^2))/3) - ((4/3) * (c1 * c2)) - ((2/15) * (c2^2))
+    f <- ((2/3) * (c1 * c2)) - ((1/30) * (c2^2))
+    e <- ((8/3) * (c1^2)) + ((1/30) * (c2^2))
+    d <- ((1/(192 * (c2^2))) * (((4 * c2) - (c1))^4) ) - ((1/(3840 * (c2^3))) * (((4 * c2) - (c1))^5) ) + ((1/(7680 * (c2^3))) * (((4 * c2) + (8*c1))^5) ) - ((7/(7680 * (c2^3))) * (((4 * c2) - (8*c1))^5) ) + ((1/(768 * (c2^3))) * ((-8 * c1)^5) ) - ((c1/(96 * (c2^3))) * (((4 * c2) - (-8*c1))^4) ) + ((((2*c1) - 1)/(192 * (c2^3))) * (((-8*c1))^4)) 
+    c <- (4/15) * (c2^2)
+    b <- -((1/(192 * (c2^2))) * (((4 * c1) + (c2))^4) ) + ((1/(24 * (c2))) * (((4 * c1) + (c2))^3) ) + ((1/(3840 * (c2^3))) * (((4 * c1) + (c2))^5) ) - ((1/(3840 * (c2^3))) * (((4 * c1) - (3* c2))^5) )
+    a <- -((1/(192 * (c2^2))) * (((4 * c1) - (c2))^4) ) - ((1/(24 * (c2))) * (((4 * c1) - (c2))^3) ) - ((1/(3840 * (c2^3))) * (((4 * c1) - (c2))^5) ) + ((1/(3840 * (c2^3))) * (((4 * c1) + (3* c2))^5) )
 
-    # k <- (-4 * (c1 * c2))/3
-    # j <- (2*(c2^2))/15
-    # ii <-  -((16 * (c1^2))/3) - ((2 * (c2^2))/3)
-    # h <- ((2/3)*(c1 * c2)) + ((1/30) * (c2^2))
-    # g <- -((16 * (c1^2))/3) - ((4/3) * (c1 * c2)) - ((2/15) * (c2^2))
-    # f <- ((2/3) * (c1 * c2)) - ((1/30) * (c2^2))
-    # e <- ((8/3) * (c1^2)) + ((1/30) * (c2^2))
-    # d <- ((1/(192 * (c2^2))) * (((4 * c2) - (c1))^4) ) - ((1/(3840 * (c2^3))) * (((4 * c2) - (c1))^5) ) + ((1/(7680 * (c2^3))) * (((4 * c2) + (8*c1))^5) ) - ((7/(7680 * (c2^3))) * (((4 * c2) - (8*c1))^5) ) + ((1/(768 * (c2^3))) * ((-8 * c1)^5) ) - ((c1/(96 * (c2^3))) * (((4 * c2) - (-8*c1))^4) ) + ((((2*c1) - 1)/(192 * (c2^3))) * (((-8*c1))^4)) 
-    # c <- (4/15) * (c2^2)
-    # b <- -((1/(192 * (c2^2))) * (((4 * c1) + (c2))^4) ) + ((1/(24 * (c2))) * (((4 * c1) + (c2))^3) ) + ((1/(3840 * (c2^3))) * (((4 * c1) + (c2))^5) ) - ((1/(3840 * (c2^3))) * (((4 * c1) - (3* c2))^5) )
-    # a <- -((1/(192 * (c2^2))) * (((4 * c1) - (c2))^4) ) - ((1/(24 * (c2))) * (((4 * c1) - (c2))^3) ) - ((1/(3840 * (c2^3))) * (((4 * c1) - (c2))^5) ) + ((1/(3840 * (c2^3))) * (((4 * c1) + (3* c2))^5) )
-
-    # kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * a
-    # kfinal[listaElements[[i]][2][[1]][[1]]+10,listaElements[[i]][2][[1]][[1]]+10] = EI * ja * a
-    # kfinal[listaElements[[i]][2][[1]][[1]]+20,listaElements[[i]][2][[1]][[1]]+20] = EI * ja * a
-
-    # kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][3][[1]][[1]]] = EI * ja * a
-    # kfinal[listaElements[[i]][2][[1]][[1]]+10,listaElements[[i]][3][[1]][[1]]+10] = EI * ja * a
-    # kfinal[listaElements[[i]][2][[1]][[1]]+20,listaElements[[i]][3][[1]][[1]]+20] = EI * ja * a
-
-
-
+    kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][2][[1]][[1]]] = EI * ja * a
+    kfinal[listaElements[[i]][2][[1]][[1]]+10,listaElements[[i]][2][[1]][[1]]+10] = EI * ja * a
+    kfinal[listaElements[[i]][2][[1]][[1]]+20,listaElements[[i]][2][[1]][[1]]+20] = EI * ja * a
 }
+```
+
