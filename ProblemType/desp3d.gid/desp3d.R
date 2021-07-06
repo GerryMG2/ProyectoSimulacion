@@ -255,214 +255,214 @@ tryCatch({
     # fila 
     
     kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][2][[1]][[1]]] %+<-% EI * ja * a
-    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] %+<-% EI * ja * a
-    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] %+<-% EI * ja * a
+    kfinal[listaElements[[i]][2][[1]][[1]]+TotalCoordinates,listaElements[[i]][2][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * a
+    kfinal[listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * a
     
     kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][3][[1]][[1]]] %+<-% EI * ja * e
-    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] %+<-% EI * ja * e
-    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] %+<-% EI * ja * e
+    kfinal[listaElements[[i]][2][[1]][[1]]+TotalCoordinates,listaElements[[i]][3][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * e
+    kfinal[listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * e
     
     kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][6][[1]][[1]]] %+<-% EI * ja * -f
-    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] %+<-% EI * ja * -f
-    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] %+<-% EI * ja * -f
+    kfinal[listaElements[[i]][2][[1]][[1]]+TotalCoordinates,listaElements[[i]][6][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -f
+    kfinal[listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -f
     
     kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][8][[1]][[1]]] %+<-% EI * ja * -f
-    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] %+<-% EI * ja * -f
-    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] %+<-% EI * ja * -f
+    kfinal[listaElements[[i]][2][[1]][[1]]+TotalCoordinates,listaElements[[i]][8][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -f
+    kfinal[listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -f
     
     kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][9][[1]][[1]]] %+<-% EI * ja * g
-    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] %+<-% EI * ja * g
-    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] %+<-% EI * ja * g
+    kfinal[listaElements[[i]][2][[1]][[1]]+TotalCoordinates,listaElements[[i]][9][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * g
+    kfinal[listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * g
     
     kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][10][[1]][[1]]] %+<-% EI * ja * f
-    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] %+<-% EI * ja * f
-    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] %+<-% EI * ja * f
+    kfinal[listaElements[[i]][2][[1]][[1]]+TotalCoordinates,listaElements[[i]][10][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * f
+    kfinal[listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * f
     
     kfinal[listaElements[[i]][2][[1]][[1]],listaElements[[i]][11][[1]][[1]]] %+<-% EI * ja * f
-    kfinal[listaElements[[i]][2][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] %+<-% EI * ja * f
-    kfinal[listaElements[[i]][2][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] %+<-% EI * ja * f
+    kfinal[listaElements[[i]][2][[1]][[1]]+TotalCoordinates,listaElements[[i]][11][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * f
+    kfinal[listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * f
     
     # fila 
     
     kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][2][[1]][[1]]] %+<-% EI * ja * e
-    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] %+<-% EI * ja * e
-    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] %+<-% EI * ja * e
+    kfinal[listaElements[[i]][3][[1]][[1]]+TotalCoordinates,listaElements[[i]][2][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * e
+    kfinal[listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * e
     
     kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][3][[1]][[1]]] %+<-% EI * ja * b
-    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] %+<-% EI * ja * b
-    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] %+<-% EI * ja * b
+    kfinal[listaElements[[i]][3][[1]][[1]]+TotalCoordinates,listaElements[[i]][3][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * b
+    kfinal[listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * b
     
     kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][6][[1]][[1]]] %+<-% EI * ja * -h
-    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] %+<-% EI * ja * -h
-    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] %+<-% EI * ja * -h
+    kfinal[listaElements[[i]][3][[1]][[1]]+TotalCoordinates,listaElements[[i]][6][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -h
+    kfinal[listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -h
     
     kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][8][[1]][[1]]] %+<-% EI * ja * -h
-    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] %+<-% EI * ja * -h
-    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] %+<-% EI * ja * -h
+    kfinal[listaElements[[i]][3][[1]][[1]]+TotalCoordinates,listaElements[[i]][8][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -h
+    kfinal[listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -h
     
     kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][9][[1]][[1]]] %+<-% EI * ja * ii
-    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] %+<-% EI * ja * ii
-    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] %+<-% EI * ja * ii
+    kfinal[listaElements[[i]][3][[1]][[1]]+TotalCoordinates,listaElements[[i]][9][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * ii
+    kfinal[listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * ii
     
     kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][10][[1]][[1]]] %+<-% EI * ja * h
-    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] %+<-% EI * ja * h
-    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] %+<-% EI * ja * h
+    kfinal[listaElements[[i]][3][[1]][[1]]+TotalCoordinates,listaElements[[i]][10][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * h
+    kfinal[listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * h
     
     kfinal[listaElements[[i]][3][[1]][[1]],listaElements[[i]][11][[1]][[1]]] %+<-% EI * ja * h
-    kfinal[listaElements[[i]][3][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] %+<-% EI * ja * h
-    kfinal[listaElements[[i]][3][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] %+<-% EI * ja * h
+    kfinal[listaElements[[i]][3][[1]][[1]]+TotalCoordinates,listaElements[[i]][11][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * h
+    kfinal[listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * h
     
     # fila x
     
     kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][2][[1]][[1]]] %+<-% EI * ja * -f
-    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] %+<-% EI * ja * -f
-    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] %+<-% EI * ja * -f
+    kfinal[listaElements[[i]][6][[1]][[1]]+TotalCoordinates,listaElements[[i]][2][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -f
+    kfinal[listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -f
     
     kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][3][[1]][[1]]] %+<-% EI * ja * -h
-    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] %+<-% EI * ja * -h
-    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] %+<-% EI * ja * -h
+    kfinal[listaElements[[i]][6][[1]][[1]]+TotalCoordinates,listaElements[[i]][3][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -h
+    kfinal[listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -h
     
     kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][6][[1]][[1]]] %+<-% EI * ja * c
-    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] %+<-% EI * ja * c
-    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] %+<-% EI * ja * c
+    kfinal[listaElements[[i]][6][[1]][[1]]+TotalCoordinates,listaElements[[i]][6][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * c
+    kfinal[listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * c
     
     kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][8][[1]][[1]]] %+<-% EI * ja * j
-    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] %+<-% EI * ja * j
-    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] %+<-% EI * ja * j
+    kfinal[listaElements[[i]][6][[1]][[1]]+TotalCoordinates,listaElements[[i]][8][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * j
+    kfinal[listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * j
     
     kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][9][[1]][[1]]] %+<-% EI * ja * -k
-    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] %+<-% EI * ja * -k
-    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] %+<-% EI * ja * -k
+    kfinal[listaElements[[i]][6][[1]][[1]]+TotalCoordinates,listaElements[[i]][9][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -k
+    kfinal[listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -k
     
     kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][10][[1]][[1]]] %+<-% EI * ja * -c
-    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] %+<-% EI * ja * -c
-    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] %+<-% EI * ja * -c
+    kfinal[listaElements[[i]][6][[1]][[1]]+TotalCoordinates,listaElements[[i]][10][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -c
+    kfinal[listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -c
     
     kfinal[listaElements[[i]][6][[1]][[1]],listaElements[[i]][11][[1]][[1]]] %+<-% EI * ja * -j
-    kfinal[listaElements[[i]][6][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] %+<-% EI * ja * -j
-    kfinal[listaElements[[i]][6][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] %+<-% EI * ja * -j
+    kfinal[listaElements[[i]][6][[1]][[1]]+TotalCoordinates,listaElements[[i]][11][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -j
+    kfinal[listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -j
     
     # fila 
     
     kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][2][[1]][[1]]] %+<-% EI * ja * -f
-    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] %+<-% EI * ja * -f
-    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] %+<-% EI * ja * -f
+    kfinal[listaElements[[i]][8][[1]][[1]]+TotalCoordinates,listaElements[[i]][2][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -f
+    kfinal[listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -f
     
     kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][3][[1]][[1]]] %+<-% EI * ja * -h
-    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] %+<-% EI * ja * -h
-    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] %+<-% EI * ja * -h
+    kfinal[listaElements[[i]][8][[1]][[1]]+TotalCoordinates,listaElements[[i]][3][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -h
+    kfinal[listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -h
     
     kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][6][[1]][[1]]] %+<-% EI * ja * j
-    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] %+<-% EI * ja * j
-    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] %+<-% EI * ja * j
+    kfinal[listaElements[[i]][8][[1]][[1]]+TotalCoordinates,listaElements[[i]][6][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * j
+    kfinal[listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * j
     
     kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][8][[1]][[1]]] %+<-% EI * ja * c
-    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] %+<-% EI * ja * c
-    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] %+<-% EI * ja * c
+    kfinal[listaElements[[i]][8][[1]][[1]]+TotalCoordinates,listaElements[[i]][8][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * c
+    kfinal[listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * c
     
     kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][9][[1]][[1]]] %+<-% EI * ja * -k
-    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] %+<-% EI * ja * -k
-    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] %+<-% EI * ja * -k
+    kfinal[listaElements[[i]][8][[1]][[1]]+TotalCoordinates,listaElements[[i]][9][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -k
+    kfinal[listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -k
     
     kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][10][[1]][[1]]] %+<-% EI * ja * -j
-    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] %+<-% EI * ja * -j
-    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] %+<-% EI * ja * -j
+    kfinal[listaElements[[i]][8][[1]][[1]]+TotalCoordinates,listaElements[[i]][10][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -j
+    kfinal[listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -j
     
     kfinal[listaElements[[i]][8][[1]][[1]],listaElements[[i]][11][[1]][[1]]] %+<-% EI * ja * -c
-    kfinal[listaElements[[i]][8][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] %+<-% EI * ja * -c
-    kfinal[listaElements[[i]][8][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] %+<-% EI * ja * -c
+    kfinal[listaElements[[i]][8][[1]][[1]]+TotalCoordinates,listaElements[[i]][11][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -c
+    kfinal[listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -c
     
     # 3
     
     # fila 
     
     kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][2][[1]][[1]]] %+<-% EI * ja * g
-    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] %+<-% EI * ja * g
-    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] %+<-% EI * ja * g
+    kfinal[listaElements[[i]][9][[1]][[1]]+TotalCoordinates,listaElements[[i]][2][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * g
+    kfinal[listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * g
     
     kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][3][[1]][[1]]] %+<-% EI * ja * ii
-    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] %+<-% EI * ja * ii
-    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] %+<-% EI * ja * ii
+    kfinal[listaElements[[i]][9][[1]][[1]]+TotalCoordinates,listaElements[[i]][3][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * ii
+    kfinal[listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * ii
     
     kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][6][[1]][[1]]] %+<-% EI * ja * -k
-    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] %+<-% EI * ja * -k
-    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] %+<-% EI * ja * -k
+    kfinal[listaElements[[i]][9][[1]][[1]]+TotalCoordinates,listaElements[[i]][6][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -k
+    kfinal[listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -k
     
     kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][8][[1]][[1]]] %+<-% EI * ja * -k
-    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] %+<-% EI * ja * -k
-    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] %+<-% EI * ja * -k
+    kfinal[listaElements[[i]][9][[1]][[1]]+TotalCoordinates,listaElements[[i]][8][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -k
+    kfinal[listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -k
     
     kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][9][[1]][[1]]] %+<-% EI * ja * d
-    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] %+<-% EI * ja * d
-    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] %+<-% EI * ja * d
+    kfinal[listaElements[[i]][9][[1]][[1]]+TotalCoordinates,listaElements[[i]][9][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * d
+    kfinal[listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * d
     
     kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][10][[1]][[1]]] %+<-% EI * ja * k
-    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] %+<-% EI * ja * k
-    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] %+<-% EI * ja * k
+    kfinal[listaElements[[i]][9][[1]][[1]]+TotalCoordinates,listaElements[[i]][10][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * k
+    kfinal[listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * k
     
     kfinal[listaElements[[i]][9][[1]][[1]],listaElements[[i]][11][[1]][[1]]] %+<-% EI * ja * k
-    kfinal[listaElements[[i]][9][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] %+<-% EI * ja * k
-    kfinal[listaElements[[i]][9][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] %+<-% EI * ja * k
+    kfinal[listaElements[[i]][9][[1]][[1]]+TotalCoordinates,listaElements[[i]][11][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * k
+    kfinal[listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * k
     
     # fila x
     
     kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][2][[1]][[1]]] %+<-% EI * ja * f
-    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] %+<-% EI * ja * f
-    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] %+<-% EI * ja * f
+    kfinal[listaElements[[i]][10][[1]][[1]]+TotalCoordinates,listaElements[[i]][2][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * f
+    kfinal[listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * f
     
     kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][3][[1]][[1]]] %+<-% EI * ja * h
-    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] %+<-% EI * ja * h
-    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] %+<-% EI * ja * h
+    kfinal[listaElements[[i]][10][[1]][[1]]+TotalCoordinates,listaElements[[i]][3][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * h
+    kfinal[listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * h
     
     kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][6][[1]][[1]]] %+<-% EI * ja * -c
-    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] %+<-% EI * ja * -c
-    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] %+<-% EI * ja * -c
+    kfinal[listaElements[[i]][10][[1]][[1]]+TotalCoordinates,listaElements[[i]][6][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -c
+    kfinal[listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -c
     
     kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][8][[1]][[1]]] %+<-% EI * ja * -j
-    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] %+<-% EI * ja * -j
-    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] %+<-% EI * ja * -j
+    kfinal[listaElements[[i]][10][[1]][[1]]+TotalCoordinates,listaElements[[i]][8][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -j
+    kfinal[listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -j
     
     kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][9][[1]][[1]]] %+<-% EI * ja * k
-    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] %+<-% EI * ja * k
-    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] %+<-% EI * ja * k
+    kfinal[listaElements[[i]][10][[1]][[1]]+TotalCoordinates,listaElements[[i]][9][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * k
+    kfinal[listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * k
     
     kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][10][[1]][[1]]] %+<-% EI * ja * c
-    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] %+<-% EI * ja * c
-    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] %+<-% EI * ja * c
+    kfinal[listaElements[[i]][10][[1]][[1]]+TotalCoordinates,listaElements[[i]][10][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * c
+    kfinal[listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * c
     
     kfinal[listaElements[[i]][10][[1]][[1]],listaElements[[i]][11][[1]][[1]]] %+<-% EI * ja * j
-    kfinal[listaElements[[i]][10][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] %+<-% EI * ja * j
-    kfinal[listaElements[[i]][10][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] %+<-% EI * ja * j
+    kfinal[listaElements[[i]][10][[1]][[1]]+TotalCoordinates,listaElements[[i]][11][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * j
+    kfinal[listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * j
     
     # fila 
     
     kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][2][[1]][[1]]] %+<-% EI * ja * f
-    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][2][[1]][[1]]*2] %+<-% EI * ja * f
-    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][2][[1]][[1]]*3] %+<-% EI * ja * f
+    kfinal[listaElements[[i]][11][[1]][[1]]+TotalCoordinates,listaElements[[i]][2][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * f
+    kfinal[listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][2][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * f
     
     kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][3][[1]][[1]]] %+<-% EI * ja * h
-    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][3][[1]][[1]]*2] %+<-% EI * ja * h
-    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][3][[1]][[1]]*3] %+<-% EI * ja * h
+    kfinal[listaElements[[i]][11][[1]][[1]]+TotalCoordinates,listaElements[[i]][3][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * h
+    kfinal[listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][3][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * h
     
     kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][6][[1]][[1]]] %+<-% EI * ja * -j
-    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][6][[1]][[1]]*2] %+<-% EI * ja * -j
-    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][6][[1]][[1]]*3] %+<-% EI * ja * -j
+    kfinal[listaElements[[i]][11][[1]][[1]]+TotalCoordinates,listaElements[[i]][6][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -j
+    kfinal[listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][6][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -j
     
     kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][8][[1]][[1]]] %+<-% EI * ja * -c
-    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][8][[1]][[1]]*2] %+<-% EI * ja * -c
-    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][8][[1]][[1]]*3] %+<-% EI * ja * -c
+    kfinal[listaElements[[i]][11][[1]][[1]]+TotalCoordinates,listaElements[[i]][8][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * -c
+    kfinal[listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][8][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * -c
     
     kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][9][[1]][[1]]] %+<-% EI * ja * k
-    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][9][[1]][[1]]*2] %+<-% EI * ja * k
-    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][9][[1]][[1]]*3] %+<-% EI * ja * k
+    kfinal[listaElements[[i]][11][[1]][[1]]+TotalCoordinates,listaElements[[i]][9][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * k
+    kfinal[listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][9][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * k
     
     kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][10][[1]][[1]]] %+<-% EI * ja * j
-    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][10][[1]][[1]]*2] %+<-% EI * ja * j
-    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][10][[1]][[1]]*3] %+<-% EI * ja * j
+    kfinal[listaElements[[i]][11][[1]][[1]]+TotalCoordinates,listaElements[[i]][10][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * j
+    kfinal[listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][10][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * j
     
     kfinal[listaElements[[i]][11][[1]][[1]],listaElements[[i]][11][[1]][[1]]] %+<-% EI * ja * c
-    kfinal[listaElements[[i]][11][[1]][[1]]*2,listaElements[[i]][11][[1]][[1]]*2] %+<-% EI * ja * c
-    kfinal[listaElements[[i]][11][[1]][[1]]*3,listaElements[[i]][11][[1]][[1]]*3] %+<-% EI * ja * c
+    kfinal[listaElements[[i]][11][[1]][[1]]+TotalCoordinates,listaElements[[i]][11][[1]][[1]]+TotalCoordinates] %+<-% EI * ja * c
+    kfinal[listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2),listaElements[[i]][11][[1]][[1]]+(TotalCoordinates*2)] %+<-% EI * ja * c
     
     # b final
     
@@ -477,16 +477,16 @@ tryCatch({
     bfinal[listaElements[[i]][10][[1]][[1]],1] %+<-% (ja/120) * 4 * Fx
     bfinal[listaElements[[i]][11][[1]][[1]],1] %+<-% (ja/120) * 4 * Fx
     
-    bfinal[listaElements[[i]][2][[1]][[1]] * 2,1] %+<-% (ja/120) * 59 * Fy
-    bfinal[listaElements[[i]][3][[1]][[1]] * 2,1] %+<-% (ja/120) * -1 * Fy
-    bfinal[listaElements[[i]][4][[1]][[1]] * 2,1] %+<-% (ja/120) * -1 * Fy
-    bfinal[listaElements[[i]][5][[1]][[1]] * 2,1] %+<-% (ja/120) * -1 * Fy
-    bfinal[listaElements[[i]][6][[1]][[1]] * 2,1] %+<-% (ja/120) * 4 * Fy
-    bfinal[listaElements[[i]][7][[1]][[1]] * 2,1] %+<-% (ja/120) * 4 * Fy
-    bfinal[listaElements[[i]][8][[1]][[1]] * 2,1] %+<-% (ja/120) * 4 * Fy
-    bfinal[listaElements[[i]][9][[1]][[1]] * 2,1] %+<-% (ja/120) * 4 * Fy
-    bfinal[listaElements[[i]][10][[1]][[1]] * 2,1] %+<-% (ja/120) * 4 * Fy
-    bfinal[listaElements[[i]][11][[1]][[1]] * 2,1] %+<-% (ja/120) * 4 * Fy
+    bfinal[listaElements[[i]][2][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 59 * Fy
+    bfinal[listaElements[[i]][3][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * -1 * Fy
+    bfinal[listaElements[[i]][4][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * -1 * Fy
+    bfinal[listaElements[[i]][5][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * -1 * Fy
+    bfinal[listaElements[[i]][6][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 4 * Fy
+    bfinal[listaElements[[i]][7][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 4 * Fy
+    bfinal[listaElements[[i]][8][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 4 * Fy
+    bfinal[listaElements[[i]][9][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 4 * Fy
+    bfinal[listaElements[[i]][10][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 4 * Fy
+    bfinal[listaElements[[i]][11][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 4 * Fy
     
     bfinal[listaElements[[i]][2][[1]][[1]] * 3,1] %+<-% (ja/120) * 59 * Fz
     bfinal[listaElements[[i]][3][[1]][[1]] * 3,1] %+<-% (ja/120) * -1 * Fz
@@ -514,7 +514,7 @@ tryCatch({
   }
   
   for (i in 1:TotalDirichletCondy) {
-    bfinal[dirichletyM[i,1] * 2] %+<-% dirichletyM[i,2]
+    bfinal[dirichletyM[i,1] +TotalCoordinates] %+<-% dirichletyM[i,2]
   }
   
   for (i in 1:TotalDirichletCondz) {
@@ -526,30 +526,30 @@ tryCatch({
   
   for (i in 1:TotalNeumannCond) {
     resultado[neumannM[i,1],2] <- neumannM[i,2]
-    resultado[neumannM[i,1]*2,2] <- neumannM[i,2]
-    resultado[neumannM[i,1]*3,2] <- neumannM[i,2]
+    resultado[neumannM[i,1]+TotalCoordinates,2] <- neumannM[i,2]
+    resultado[neumannM[i,1]+(TotalCoordinates*2),2] <- neumannM[i,2]
     
   }
   
   for (i in 1:(TotalCoordinates * 3)) {
     for(j in 1:TotalNeumannCond){
       bfinal[i,1] %+<-% - (neumannM[j,2]*kfinal[neumannM[j,1]])
-      bfinal[i,1] %+<-% - (neumannM[j,2]*kfinal[neumannM[j,1] * 2])
-      bfinal[i,1] %+<-% - (neumannM[j,2]*kfinal[neumannM[j,1] * 3])
+      bfinal[i,1] %+<-% - (neumannM[j,2]*kfinal[neumannM[j,1] +TotalCoordinates])
+      bfinal[i,1] %+<-% - (neumannM[j,2]*kfinal[neumannM[j,1] +(TotalCoordinates*2)])
     }
   }
-  rows_to_keep <- matrix(data=TRUE,nrow=1,ncol=TotalCoordinates * 3 )
-  cols_to_keep <- matrix(data=TRUE,nrow=1,ncol=TotalCoordinates * 3 )
+  rows_to_keep <- matrix(data=TRUE,nrow=1,ncol=(TotalCoordinates * 3) )
+  cols_to_keep <- matrix(data=TRUE,nrow=1,ncol=(TotalCoordinates * 3) )
   for (i in 1:TotalNeumannCond) {
     
     rows_to_keep[1,neumannM[i,1]] <- FALSE
     cols_to_keep[1,neumannM[i,1]] <- FALSE
     
-    rows_to_keep[1,neumannM[i,1]*2] <- FALSE
-    cols_to_keep[1,neumannM[i,1]*2] <- FALSE
+    rows_to_keep[1,neumannM[i,1]+TotalCoordinates] <- FALSE
+    cols_to_keep[1,neumannM[i,1]+TotalCoordinates] <- FALSE
     
-    rows_to_keep[1,neumannM[i,1]*3] <- FALSE
-    cols_to_keep[1,neumannM[i,1]*3] <- FALSE
+    rows_to_keep[1,neumannM[i,1]+(TotalCoordinates*2)] <- FALSE
+    cols_to_keep[1,neumannM[i,1]+(TotalCoordinates*2)] <- FALSE
   }
   
   kfinal <- kfinal[rows_to_keep,cols_to_keep]
