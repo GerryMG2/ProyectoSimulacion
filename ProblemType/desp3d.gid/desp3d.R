@@ -488,16 +488,16 @@ tryCatch({
     bfinal[listaElements[[i]][10][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 4 * Fy
     bfinal[listaElements[[i]][11][[1]][[1]] +TotalCoordinates,1] %+<-% (ja/120) * 4 * Fy
     
-    bfinal[listaElements[[i]][2][[1]][[1]] * 3,1] %+<-% (ja/120) * 59 * Fz
-    bfinal[listaElements[[i]][3][[1]][[1]] * 3,1] %+<-% (ja/120) * -1 * Fz
-    bfinal[listaElements[[i]][4][[1]][[1]] * 3,1] %+<-% (ja/120) * -1 * Fz
-    bfinal[listaElements[[i]][5][[1]][[1]] * 3,1] %+<-% (ja/120) * -1 * Fz
-    bfinal[listaElements[[i]][6][[1]][[1]] * 3,1] %+<-% (ja/120) * 4 * Fz
-    bfinal[listaElements[[i]][7][[1]][[1]] * 3,1] %+<-% (ja/120) * 4 * Fz
-    bfinal[listaElements[[i]][8][[1]][[1]] * 3,1] %+<-% (ja/120) * 4 * Fz
-    bfinal[listaElements[[i]][9][[1]][[1]] * 3,1] %+<-% (ja/120) * 4 * Fz
-    bfinal[listaElements[[i]][10][[1]][[1]] * 3,1] %+<-% (ja/120) * 4 * Fz
-    bfinal[listaElements[[i]][11][[1]][[1]] * 3,1] %+<-% (ja/120) * 4 * Fz
+    bfinal[listaElements[[i]][2][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * 59 * Fz
+    bfinal[listaElements[[i]][3][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * -1 * Fz
+    bfinal[listaElements[[i]][4][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * -1 * Fz
+    bfinal[listaElements[[i]][5][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * -1 * Fz
+    bfinal[listaElements[[i]][6][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * 4 * Fz
+    bfinal[listaElements[[i]][7][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * 4 * Fz
+    bfinal[listaElements[[i]][8][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * 4 * Fz
+    bfinal[listaElements[[i]][9][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * 4 * Fz
+    bfinal[listaElements[[i]][10][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * 4 * Fz
+    bfinal[listaElements[[i]][11][[1]][[1]] +(TotalCoordinates*2),1] %+<-% (ja/120) * 4 * Fz
     
     
     
